@@ -1,7 +1,7 @@
 #!/bin/bash
 
-username=''
-password=''
+username='ridhishjain'
+password='dell'
 
 repoName='rclone-webui-react'
 
@@ -68,7 +68,7 @@ if [[ "$command" == "run" ]]; then
 	#statements
 	if [[ -e "$repoName"/build ]]; then
 		#statements
-		./rclone rcd --rc-serve --rc-user="$username" --rc-pass="$password" --rc-files="`pwd`/rclone-webui-react/build" -vv
+		./rclone rcd --rc-serve --rc-user="$username" --rc-pass="$password" --rc-files="`pwd`/rclone-webui-react/build" --rc-allow-origin="*" -vv
 	else
 		echo "Please run build first"
 	fi
